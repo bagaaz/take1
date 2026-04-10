@@ -1,0 +1,31 @@
+<!-- components/header.html -->
+<!-- Navbar Take 1 Comunicação -->
+<header class="navbar" id="navbar" role="banner">
+  <div class="container navbar__container">
+    <!-- IMG-G01 — Logo real da Take 1 -->
+    <a href="index.html" class="navbar__logo" aria-label="Take 1 Comunicação — página inicial">
+      <img src="assets/images/logo_take1.png"
+           alt="Take 1 Comunicação"
+           class="navbar__logo-img"
+           width="140" height="50">
+    </a>
+
+    <nav class="navbar__menu" id="navbarMenu" aria-label="Navegação principal">
+      <ul class="navbar__links">
+        <li><a href="index.html" class="navbar__link" data-page="index">Home</a></li>
+        <li><a href="quem-somos.html" class="navbar__link" data-page="quem-somos">Quem Somos</a></li>
+        <li><a href="clientes.html" class="navbar__link" data-page="clientes">Clientes</a></li>
+        <li><a href="contato.html" class="navbar__link btn-nav-cta" data-page="contato">Fale Conosco</a></li>
+      </ul>
+    </nav>
+
+    <button class="navbar__hamburger" id="hamburgerBtn"
+            aria-label="Abrir menu de navegação"
+            aria-expanded="false"
+            aria-controls="navbarMenu"
+            type="button">
+      <i data-lucide="menu" class="hamburger-icon--open" aria-hidden="true"></i>
+      <i data-lucide="x" class="hamburger-icon--close" style="display:none" aria-hidden="true"></i>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato com a Take 1 Comunicação. Solicite um orçamento ou tire suas dúvidas sobre nossas soluções de comunicação integrada.">
+  <title>Fale Conosco — Take 1 Comunicação</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <!-- NAVBAR (dinamicamente carregado via fetch) -->
+  <div id="site-header"></div>
+
+  <main>
+
+    <!-- SEÇÃO 1 — HERO INTERNO -->
+    <section class="page-hero page-hero--contato">
+      <!-- IMG-CT01 -->
+      <div class="page-hero__overlay"></div>
+      <div class="page-hero__content" data-animate="fade-up">
+        <nav class="breadcrumb" aria-label="Caminho de navegação">
+          <a href="index.html">Home</a> <span>/</span> <span>Fale Conosco</span>
+        </nav>
+        <h1>Fale Conosco</h1>
+        <p>Estamos prontos para transformar a comunicação da sua empresa. Entre em contato!</p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2 — FORMULÁRIO + INFORMAÇÕES DE CONTATO -->
+    <section class="contact-section section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- FORMULÁRIO (lado esquerdo) -->
+          <div class="contact-form-wrap" data-animate="fade-right">
+            <span class="section-eyebrow">Solicite um Orçamento</span>
+            <h2 class="section-title">Vamos conversar sobre o seu projeto</h2>
+            <p style="color:#6B6B6B; margin-bottom: 32px;">Preencha o formulário abaixo e nossa equipe entrará em contato em até 24 horas.</p>
+
+            <form class="contact-form" id="contactForm" novalidate>
+              <!-- Nome -->
+              <div class="form-group">
+                <label for="nome" class="form-label">Nome completo *</label>
+                <input type="text" id="nome" name="nome" class="form-input"
+                       placeholder="Seu nome completo" required minlength="3"
+                       autocomplete="name">
+                <span class="field-error" id="nome-error" role="alert"></span>
+              </div>
+
+              <!-- E-mail -->
+              <div class="form-group">
+                <label for="email" class="form-label">E-mail *</label>
+                <input type="email" id="email" name="email" class="form-input"
+                       placeholder="seu@email.com.br" required
+                       autocomplete="email">
+                <span class="field-error" id="email-error" role="alert"></span>
+              </div>
+
+              <!-- Telefone -->
+              <div class="form-group">
+                <label for="telefone" class="form-label">Telefone / WhatsApp</label>
+                <input type="tel" id="telefone" name="telefone" class="form-input"
+                       placeholder="(27) 99999-0000"
+                       autocomplete="tel">
+                <span class="field-error" id="telefone-error" role="alert"></span>
+              </div>
+
+              <!-- Empresa -->
+              <div class="form-group">
+                <label for="empresa" class="form-label">Empresa</label>
+                <input type="text" id="empresa" name="empresa" class="form-input"
+                       placeholder="Nome da sua empresa"
+                       autocomplete="organization">
+              </div>
+
+              <!-- Serviço de interesse (select) -->
+              <div class="form-group">
+                <label for="servico" class="form-label">Serviço de interesse</label>
+                <select id="servico" name="servico" class="form-input form-select">
+                  <option value="">Selecione uma área</option>
+                  <option value="publicidade">Publicidade</option>
+                  <option value="comunicacao-empresarial">Comunicação Empresarial</option>
+                  <option value="marketing-digital">Marketing Digital (Take 1 LAB)</option>
+                  <option value="editoracao">Editoração e Design Gráfico</option>
+                  <option value="comunicacao-integrada">Comunicação Integrada Completa</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+
+              <!-- Mensagem -->
+              <div class="form-group">
+                <label for="mensagem" class="form-label">Mensagem *</label>
+                <textarea id="mensagem" name="mensagem" class="form-input form-textarea"
+                          placeholder="Descreva seu projeto ou necessidade de comunicação..."
+                          required minlength="10" rows="5"></textarea>
+                <span class="field-error" id="mensagem-error" role="alert"></span>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="btn-primary btn-full" id="submitBtn">
+                <span class="btn-text">Enviar Mensagem</span>
+                <span class="btn-loading" aria-hidden="true" style="display:none">Enviando...</span>
+              </button>
+
+              <!-- Mensagem de sucesso -->
+              <div class="form-success" id="formSuccess" role="alert" style="display:none">
+                <i data-lucide="check-circle" aria-hidden="true"></i>
+                <p><strong>Mensagem enviada com sucesso!</strong><br>Nossa equipe entrará em contato em breve.</p>
+              </div>
+            </form>
+          </div>
+
+          <!-- INFORMAÇÕES DE CONTATO (lado direito) -->
+          <aside class="contact-info" data-animate="fade-left">
+            <div class="contact-info__card">
+              <h3 class="contact-info__title">Informações de Contato</h3>
+
+              <div class="contact-info__item">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                <div>
+                  <strong>Endereço</strong>
+                  <p>Rua das Comunicações, 100<br>Serra — ES, CEP 29000-000</p>
+                </div>
+              </div>
+
+              <div class="contact-info__item">
+                <i data-lucide="phone" aria-hidden="true"></i>
+                <div>
+                  <strong>Telefone</strong>
+                  <p><a href="tel:+552733330000">(27) 3333-0000</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info__item">
+                <i data-lucide="message-circle" aria-hidden="true"></i>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <p><a href="https://wa.me/5527999990000" target="_blank" rel="noopener noreferrer">(27) 99999-0000</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info__item">
+                <i data-lucide="mail" aria-hidden="true"></i>
+                <div>
+                  <strong>E-mail</strong>
+                  <p><a href="mailto:contato@take1comunicacao.com.br">contato@take1comunicacao.com.br</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info__hours">
+                <strong>Horário de Atendimento</strong>
+                <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+              </div>
+
+              <!-- Redes sociais -->
+              <div class="contact-info__social">
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Take 1 Comunicação" class="social-link">
+                  <!-- Instagram — stroke 1.5, padrão Lucide -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+                  </svg>
+                  Instagram
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Take 1 Comunicação" class="social-link">
+                  <!-- LinkedIn — stroke 1.5, padrão Lucide -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3 — MAPA ESTILIZADO -->
+    <section class="map-section section bg-light">
+      <div class="container">
+        <h2 class="section-title text-center" data-animate="fade-up">Nossa Localização</h2>
+        <div class="map-wrapper" data-animate="fade-up" style="transition-delay:0.2s; max-width: 600px; margin: 40px auto;">
+          <!-- IMG-CT02 -->
+          <img src="https://picsum.photos/seed/take1mapa/600/400"
+               alt="Localização do escritório da Take 1 Comunicação"
+               loading="lazy" class="map-image">
+          <!-- Pin Lucide em #AA2845 -->
+          <div class="map-pin" aria-hidden="true">
+            <i data-lucide="map-pin" style="width: 60px; height: 60px; color: #AA2845; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); stroke-width: 1.5;"></i>
+            <span class="map-pin__label">Take 1 Comunicação</span>
+          </div>
+        </div>
+        <p class="map-address">
+          <strong>Rua das Comunicações, 100</strong> — Serra, ES — CEP 29000-000
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <!-- FOOTER (dinamicamente carregado via fetch) -->
+  <div id="site-footer"></div>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script src="script.js" defer></script>
+
+</body>
+</html>
