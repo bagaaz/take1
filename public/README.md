@@ -36,7 +36,7 @@ take1-site/
 **⚠️ Nota sobre componentes header/footer dinâmicos:** O site usa `fetch()` para carregar header e footer dinamicamente. Por segurança dos navegadores, isso **não funciona** ao abrir o `index.html` diretamente pelo explorador de arquivos (`file://`). Para funcionar corretamente, escolha uma das opções:
 
 - **Live Server do VS Code** (recomendado): Instale a extensão "Live Server" e clique em "Go Live"
-- **Python HTTP Server**: Na pasta do projeto, execute `python -m http.server 8000` e acesse `http://localhost:8000`
+- **Python HTTP Server**: Na raiz do repositório, execute `python3 -m http.server 8000 --directory public` e acesse `http://localhost:8000`
 - **Qualquer servidor web local**: XAMPP, WAMP, nginx, etc.
 
 **Passo a passo:**
